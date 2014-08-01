@@ -1,0 +1,63 @@
+
+.Home{
+    background: url('../img/intro_bkg.jpg');
+    height: 600px;
+}
+section {
+    padding: 100px 0;
+    
+    text-align: center;
+}
+.lead-big {
+    font-size: 28px;
+    line-height: 48px;
+    color: white;
+}
+.form-inline input,
+.form-inline textarea,
+.form-inline select {
+    max-width: 235px;
+    height: 40px;
+    overflow: hidden;
+    line-height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted;
+    vertical-align: text-bottom;
+    cursor: pointer;
+
+}
+.form-inline .form-group label {
+    position: relative;
+}
+
+.form-inline select {
+    color:#3498db ;
+}
+
+.submit.btn.btn-lg {
+    font-size: 28px;
+    color: #999;
+    border: 1px dotted;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+
+*::-webkit-input-placeholder {
+    color: #3498db;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #3498db;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #3498db;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #3498db;
+}
+
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app="BunkinProfile">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bunkin'</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+  </head>
+  <body ng-controller="bunkCardList">
+
+    <div class='navBar'>
+    <p>Bunkin'</p>        
+    </div>
+
+
+<div class='Profile'>
+  <div class='row'>
+        <div class='col-xs-4 profilePic'>
+          <img src="http://www.scifinow.co.uk/wp-content/uploads/2013/05/Iron-Man-4.jpg" class="img-circle coverimg" alt="Responsive image">
+        </div>
+
+        <div class='col-xs-8 profileData'>
+                <div class='row'>
+                   <div class='col-xs-3 Bunks'>
+                      <p class="text-center">520</p>
+                      <h5>Bunks</h5>                      
+                  </div>               
+
+                  <div class='col-xs-4 Following'>
+                      <p class="text-center">650</p>
+                      <h5>Following</h5>                      
+                  </div> 
+
+                  <div class='col-xs-3 Followers'>
+                      <p class="text-center" >280</p>
+                      <h5>Followers</h5>                      
+                  </div> 
+              </div>
+          </div>
+
+          <div class="container">
+            <button class="btn FollowBtn" rel="6">Follow</button>
+          </div>
+
+    </div>
+    <div class='profileNameDetails'>
+      <address>
+        <strong class="text-center">Tony Stark</strong>
+        <p>www.tonystark.com</p>
+      </address>
+    </div>
+
+
+  </div>
+<!--End of Profile Information -->
+
+<!-- Timeline starts here -->
+
+
+ <div class='BunkCard'>
+    <div ng-repeat="user in users" class="container">
+    <div class="row">
+        <div class="[ col-xs-12 col-sm-offset-1 col-sm-5 ]">
+            <div class="[ panel panel-default ] panel-google-plus">
+                <div class="dropdown">
+                    <span class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="[ glyphicon glyphicon-chevron-down ]"></span>
+                    </span>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Report</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hide</a></li>
+                    </ul>
+                </div>               
+                <div class="panel-heading">
+                    <img class="[ img-circle pull-left ]" ng-src="{{user.profilePic}}" alt="Mouse0270" />
+                    <h3>{{user.name}}</h3>
+                    <h5><span>Jun 27, 2014</span> </h5>                    
+                </div>
+
+                <div class="panel-body">
+                    <p>{{user.status}}</p>
+
+                </div>
+                <div class="panel-photo">
+                    <img src={{user.mapImage}} />
+                </div>
+                <div class='tagged'>
+                  <div class='row'>
+                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://img.labnol.org/di/bo.jpg" alt="Mouse0270" /></div>
+                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://www.imliji.info/img/hugh_jackman/8.jpeg" alt="Mouse0270" /></div>
+                  </div>
+                </div>
+
+                <div class="panel-footer">
+                  <div class='row'>
+                    <div class='col-xs-4 highFive'><img src='img/highFive.png' /></div>
+                    <div class='col-xs-4 comment'><img src='http://community.k2.com/html/assets/comment-gray-icon.png' /></div>
+                    <div class='col-xs-4 plan'><img src='http://www.jamasoftware.com/media/img/services/planning.png' /></div>
+                  </div>
+                </div>              
+            </div>
+        </div>       
+        
+    </div>
+  </div>
+</div>
+
+<!--- End of Map Bunk Card -->
+
+<div class='BunkCard'>
+              <div class="container">
+    <div class="row">
+        <div class="[ col-xs-12 col-sm-offset-1 col-sm-5 ]">
+            <div class="[ panel panel-default ] panel-google-plus">
+                <div class="dropdown">
+                    <span class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="[ glyphicon glyphicon-chevron-down ]"></span>
+                    </span>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Report</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hide</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="panel-google-plus-tags">
+                    <ul>
+                        <li>#Millennials</li>
+                        <li>#Generation</li>
+                    </ul>
+                </div> -->
+                <div class="panel-heading">
+                    <img class="[ img-circle pull-left ]" src="http://www.esquire.com/cm/esquire/images/ha/christian-bale-portrait-1210-lg.jpg" alt="Mouse0270" />
+                    <h3>Robert McIntosh</h3>
+                    <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+
+
+
+
+                <div class="panel-body">
+                    <p>Had a great time! :)</p>
+                    
+                </div>
+
+                 <div class="panel-map">                    
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1903.1026543286966!2d78.37915173743441!3d17.449884792168078!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dea35ca91d%3A0x6c8b3230bf6c5252!2sTrident%2C+Hyderabad!5e0!3m2!1sen!2s!4v1406892953750" width='100%' height="150"  frameborder="0" style="border:0"></iframe>
+
+                </div>
+
+
+                <div class='tagged'>
+                  <div class='row'>
+                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://img.labnol.org/di/bo.jpg" alt="Mouse0270" /></div>
+                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://www.imliji.info/img/hugh_jackman/8.jpeg" alt="Mouse0270" /></div>
+                  </div>
+
+                </div>
+
+                <div class="panel-footer">
+                  <div class='row'>
+                    <div class='col-xs-4 highFive'><img src='img/highFive.png' /></div>
+                    <div class='col-xs-4 comment'><img src='http://community.k2.com/html/assets/comment-gray-icon.png' /></div>
+                    <div class='col-xs-4 plan'><img src='http://www.jamasoftware.com/media/img/services/planning.png' /></div>
+                  </div>
+                </div>
+              
+            </div>
+        </div>       
+        
+    </div>
+  </div>
+
+</div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/navBar.js"></script>
+
+
+  </body>
+</html>
