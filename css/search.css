@@ -1,0 +1,61 @@
+
+html, body{
+  background-color: #ededed;
+  overflow-x:hidden!important;
+}
+
+.navBar{
+    background-color: #fc612b;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar h1{
+
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin-top: auto;
+  margin-bottom: auto;  
+}
+
+.navBar button{
+border: none;
+background-color: #2ecc71;
+border-radius: 0;
+
+}
+
+.searchBox{  
+  margin-top: 15%;
+  padding: 0;
+}
+
+.searchFilters{
+  width: 80%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchFilters button{
+  width: 30%;
+ border: none;
+}
+
+.priceFilter {
+  width:80%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.price{
+  background-color: white;  
+}
+
+.priceTxt{
+  height: 1.5em;
+}

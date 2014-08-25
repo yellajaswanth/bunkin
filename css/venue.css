@@ -1,0 +1,61 @@
+html, body{
+  background-color: #ededed;
+  overflow-x:hidden!important;
+}
+
+.navBar{
+    background-color: #fc612b;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar h1{
+
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+    text-align: center; 
+  font-family: 'Open Sans', sans-serif;
+  margin-top: auto;
+  margin-bottom: auto;  
+}
+
+.navBar button{
+border: none;
+background-color: #2ecc71;
+border-radius: 0;
+}
+
+.venueTab{
+  position: relative;
+
+}
+
+
+.venueImg{
+margin-top: 28%;
+}
+
+.venueImg img{
+  width: 100%;
+  height: 50%;
+}
+
+.venueContainer{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.venueContainer h3{
+  color: #c0392b;
+  line-height: 0.8em;
+}
+
+.venueContainer p{
+  font-size: 10px;
+}
+
+h4, h3, p{
+  font-family: 'Open Sans', sans-serif;
+}
