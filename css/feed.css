@@ -1,0 +1,161 @@
+
+html, body{
+  background-color: #ededed;
+  overflow-x:hidden;
+  overflow-y:visible;
+
+}
+
+.navBar{
+  position: relative;
+    background-color: #fc612b;
+}
+
+.navBar h1{
+
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin-top: auto;
+  margin-bottom: auto;  
+}
+.card{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedHeader{
+  height: 4em;
+}
+
+.userImg {
+  width: 50px;
+  height: 50px;  
+  padding: 0;
+
+}
+
+.userImg img{
+  width: 80%;
+  height: 80%;
+  border-radius: 10%;
+}
+
+.userNameDate{
+  
+}
+
+.userNameDate h5,p{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.userNameDate p{
+  font-size: 10px;
+}
+
+.emoticons{
+  
+}
+
+.emoji{
+  
+  text-align: center;
+}
+
+.statusTxt{
+  padding: 0;  
+  
+}
+.content{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h5 span{
+  color:#fc612b;
+  font-weight: 800;
+}
+
+.statusImg{
+  width: 100%;
+  height: 50%;
+}
+
+.statusImg img{
+  width: 100%;
+}
+
+
+
+
+.statusResponse{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statusResponse i{
+  font-size: 20px;
+
+}
+
+
+
+.ion-heart{
+  color:#ff3636;
+}
+
+i span{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ion-ios7-chatbubble{
+  color:#0080ff;
+}
+
+
+.comment, .writeComment{
+  width: 90%;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userCmt h5,p{
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: justify;
+}
+
+.cmtOptions{
+  margin-top: auto;
+  margin-bottom: auto;
+  
+  padding: 0;
+  height: 22px;
+}
+
+.userCmt h5{
+  font-weight: 700;
+  color: #fc612b;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.write i{
+  margin-top: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 25px;
+}

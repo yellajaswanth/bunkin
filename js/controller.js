@@ -50,41 +50,33 @@ BunkinProfile.controller('bunkCardList', function($scope){
     ];
 });
 
-BunkinSearchResults.controller('searchRsltCtrl', function($scope){
-    $scope.results = [
+BunkinSearchResults.controller('searchRsltCtrl', function($http,$scope){
+    $scope.results;
+    $scope.searchQuery = 'coffee';
 
-        {"venueName":"Ohri's Banjara" , 
-        "Address":"Road No.12, Banjara Hills", 
-        "city":"Hyderabad",
-        "fp":"60",
-        "distance":"500",
-        "favd":"30",
-        "bunkins":"100"
-        },
+    $scope.hitEnter = function(keyEvent) {
+    if (keyEvent.which === 13){
+        var url = 'https://api.foursquare.com/v2/venues/search?client_id=H42U1L011OO5XBB4ROHSOBMCOBBPAOUYR55QBFANBGHCBR3P&client_secret=RQGJR3OGLWR0QNTOBU3RLM5TW0JCPWIGKNLS2RHL1XPUVRVV&v=20130815&ll=17.445824,78.377395&query='+$scope.searchQuery;
 
-        {"venueName":"Coffee Affairs" , 
-        "Address":"Road No.12, Banjara Hills", 
-        "city":"Hyderabad",
-        "fp":"60",
-        "distance":"500",
-        "favd":"30",
-        "bunkins":"100"
-        },   
+        $http.get(url)
+        .success(function(data){
+            $scope.results = data;
+              $scope.fp = function(){
+                return Math.floor((Math.random()*90)+1);
+                }
 
-        {"venueName":"Fume Lounge" , 
-        "Address":"Road No.12, Banjara Hills", 
-        "city":"Hyderabad",
-        "fp":"60",
-        "distance":"500",
-        "favd":"30",
-        "bunkins":"100"
-        }   
-    ];
+            //console.log($scope.results);
+        });
+
+    }
+}
+
+
+
 });
 
 
 var BunkinSearch = angular.module('BunkinSearch', []);
-
 BunkinSearch.controller('searchCtrl', function ($scope) {
 
 });

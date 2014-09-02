@@ -1,0 +1,29 @@
+[
+
+        {"venueName":"Ohri's Banjara" , 
+        "Address":"Road No.12, Banjara Hills", 
+        "city":"Hyderabad",
+        "fp":"60",
+        "distance":"500",
+        "favd":"30",
+        "bunkins":"100"
+        },
+
+        {"venueName":"Coffee Affairs" , 
+        "Address":"Road No.12, Banjara Hills", 
+        "city":"Hyderabad",
+        "fp":"60",
+        "distance":"500",
+        "favd":"30",
+        "bunkins":"100"
+        },   
+
+        {"venueName":"Fume Lounge" , 
+        "Address":"Road No.12, Banjara Hills", 
+        "city":"Hyderabad",
+        "fp":"60",
+        "distance":"500",
+        "favd":"30",
+        "bunkins":"100"
+        }   
+    ]

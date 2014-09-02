@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="BunkinProfile">
+<html ng-app="BunkinNewsFeed">
   <head>
     <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/Home.css" />
+           <link href="css/ionic.css" rel="stylesheet">
+            <script src="js/ionic.bundle.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/feed.css" />
         <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <title>Bunkin'</title>
 
@@ -15,141 +16,126 @@
     <script src="js/angular.min.js"></script>
     <script src="js/controller.js"></script>
   </head>
-  <body ng-controller="bunkCardList">
 
-    <div class='navBar'>
-    <p>Bunkin'</p>        
+
+
+  <body ng-controller="newsFeedCtrl">
+
+
+<div class="navigation">
+   <div class="bar bar-header navBar">
+        <h1 class="title">Bunkin</h1>
     </div>
-
-
-
-<!-- Timeline starts here -->
-
-
- <div class='BunkCard'>
-    <div ng-repeat="user in users" class="container">
-    <div class="row">
-        <div class="[ col-xs-12 col-sm-offset-1 col-sm-5 ]">
-            <div class="[ panel panel-default ] panel-google-plus">
-                <div class="dropdown">
-                    <span class="dropdown-toggle" type="button" data-toggle="dropdown">
-                        <span class="[ glyphicon glyphicon-chevron-down ]"></span>
-                    </span>
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Report</a></li>
-                        <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hide</a></li>
-                    </ul>
-                </div>               
-                <div class="panel-heading">
-                    <img class="[ img-circle pull-left ]" ng-src="{{user.profilePic}}" alt="Mouse0270" />
-                    <h3>{{user.name}}</h3>
-                    <h5><span>Jun 27, 2014</span> </h5>                    
-                </div>
-
-                <div class="panel-body">
-                    <p>{{user.status}}</p>
-
-                </div>
-                <div class="panel-photo">
-                    <img src={{user.mapImage}} />
-                </div>
-                <div class='tagged'>
-                  <div class='row'>
-                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://img.labnol.org/di/bo.jpg" alt="Mouse0270" /></div>
-                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://www.imliji.info/img/hugh_jackman/8.jpeg" alt="Mouse0270" /></div>
-                  </div>
-                </div>
-
-                <div class="panel-footer">
-                  <div class='row'>
-                    <div class='col-xs-4 highFive'><img src='img/highFive.png' /></div>
-                    <div class='col-xs-4 comment'><img src='http://community.k2.com/html/assets/comment-gray-icon.png' /></div>
-                    <div class='col-xs-4 plan'><img src='http://www.jamasoftware.com/media/img/services/planning.png' /></div>
-                  </div>
-                </div>              
-            </div>
-        </div>       
-        
-    </div>
-  </div>
 </div>
 
-<!--- End of Map Bunk Card -->
+<div class="bunkinFeed">
 
-<div class='BunkCard'>
-              <div class="container">
-    <div class="row">
-        <div class="[ col-xs-12 col-sm-offset-1 col-sm-5 ]">
-            <div class="[ panel panel-default ] panel-google-plus">
-                <div class="dropdown">
-                    <span class="dropdown-toggle" type="button" data-toggle="dropdown">
-                        <span class="[ glyphicon glyphicon-chevron-down ]"></span>
-                    </span>
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Report</a></li>
-                        <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hide</a></li>
-                    </ul>
-                </div>
-                <!-- <div class="panel-google-plus-tags">
-                    <ul>
-                        <li>#Millennials</li>
-                        <li>#Generation</li>
-                    </ul>
-                </div> -->
-                <div class="panel-heading">
-                    <img class="[ img-circle pull-left ]" src="http://www.esquire.com/cm/esquire/images/ha/christian-bale-portrait-1210-lg.jpg" alt="Mouse0270" />
-                    <h3>Robert McIntosh</h3>
-                    <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
-                </div>
+<div class="card feedCard">
 
+  <div class="feedHeader">
+    <div class="row" >
+      
+      <div class="col col-80">
+      <!--UserDetails-->
+        <div class="row">
+          <div class="userImg" >
+            <img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/10552465_10204647240963910_7839219630017533136_n.jpg?oh=739cd434af86b4bf456e09329e255b97&oe=5465C728&__gda__=1417606989_6c3c7eaf542d2b8fd4165f57b72fe78f">
+          </div>
+          <div class="userNameDate" >
+            <h5>Jaswanth Yella</h5>
+            <p class="ion-ios7-clock-outline"> 2hrs</p>
+          </div>
+        </div>
+      </div> <!--End of UserDetails-->
 
+      <div class="col col-20 emoticons">
+        <div class="emoji">
+          <h4></h4>
+        </div>
+      </div>
+    </div>
+  </div> <!--End of FeedHeader -->
 
+    <div class="content">
+        <div class="col-90 statusTxt" >
+          <h5>A great day. A great game. GameOfThrones <i>-with</i> <span>Abhijeet Reddy, Nikhil, Shravan, Vinay</span></h5>
+        </div>
+        <div class="statusImg">
+          <img src="img/tr.jpg">
+        </div>
+    </div>   <!--End of content -->
 
-                <div class="panel-body">
-                    <p>Had a great time! :)</p>
-                    
-                </div>
+    
+        <div class="row statusResponse">
+            <div class="col-20">
+              <i ng-class="{true: 'ion-ios7-heart-outline', false: 'ion-heart'}[isFavActive]" ng-click="toggleActive()"> <span>{{favCount+incrFav}}</span></i>
+            </div>
 
-                 <div class="panel-map">                    
-
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1903.1026543286966!2d78.37915173743441!3d17.449884792168078!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dea35ca91d%3A0x6c8b3230bf6c5252!2sTrident%2C+Hyderabad!5e0!3m2!1sen!2s!4v1406892953750" width='100%' height="150"  frameborder="0" style="border:0"></iframe>
-
-                </div>
-
-
-                <div class='tagged'>
-                  <div class='row'>
-                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://img.labnol.org/di/bo.jpg" alt="Mouse0270" /></div>
-                      <div class='col-xs-2 tagUser'><img class='img-circle' src="http://www.imliji.info/img/hugh_jackman/8.jpeg" alt="Mouse0270" /></div>
-                  </div>
-
-                </div>
-
-                <div class="panel-footer">
-                  <div class='row'>
-                    <div class='col-xs-4 highFive'><img src='img/highFive.png' /></div>
-                    <div class='col-xs-4 comment'><img src='http://community.k2.com/html/assets/comment-gray-icon.png' /></div>
-                    <div class='col-xs-4 plan'><img src='http://www.jamasoftware.com/media/img/services/planning.png' /></div>
-                  </div>
-                </div>
+             <div class="col-20">
+              <i ng-class="{true: 'ion-ios7-chatbubble-outline', false: 'ion-ios7-chatbubble'}[isCommentActive]" ng-click="toggleCommentActive()"> <span>{{commentCount+incrComm}}</span></i>
+            </div>
+        </div>  
+        
+        <div ng-show="showComments" class="comments">
+          <hr />
+            <div class="row comment">
               
+                <div class="col-20 userImg" >
+                  <img src="https://scontent-b-cdg.xx.fbcdn.net/hphotos-xpa1/t31.0-8/s960x960/10476408_10203512439464085_2818086165259234686_o.jpg">
+                </div>
+                <div class="col-80 userCmt" >                                
+                  <h5>Abhijeet Reddy</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+
+
+                <div class="cmtActions">
+                  <div class="row">
+                        <i class="col-20" ng-class="{true: 'ion-ios7-heart-outline', false: 'ion-heart'}[isFavActive]" ng-click="toggleActive()"> <span>{{favCount+incrFav}}</span></i> 
+
+                        <a><i class="ion-trash-b"></i></a>
+
+                  </div>
+                </div>
+                </div>
             </div>
-        </div>       
-        
-    </div>
-  </div>
+
+            <div class="writeComment" >
+              
+              <div class="row write"> 
+                  <div class="col-20 userImg" >
+                    <img src="https://scontent-b-cdg.xx.fbcdn.net/hphotos-xpa1/t31.0-8/s960x960/10476408_10203512439464085_2818086165259234686_o.jpg">
+                </div>
+                  <div class="col-80">
+                  <div  class="row" >               
+                    <textarea type="text" placeholder="Write Comment"></textarea>
+                    <i class="ion-paper-airplane"></i>
+                  </div>
+                  </div>
+
+              </div>
+
+            </div>
+
+        </div> <!--End of Comments -->
+
+
+</div>
+
+
+</div>
+
+<<div class="tabs">
+  <a class="tab-item">
+    Home
+  </a>
+  <a class="tab-item" href="Search.html">
+    Search
+  </a>
 
 </div>
 
 
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/navBar.js"></script>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </body>
 </html>

@@ -31,36 +31,37 @@
         <div class="list list-inset">
           <label class="item item-input">
             <i class="icon ion-search placeholder-icon"></i>
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" ng-model='searchQuery' ng-keypress="hitEnter($event)">
           </label>
         </div>
 </div>
 
 <div class="relevant"> 
-    Relevant results for "Buffet"  
+    Relevant results for "{{searchQuery}}"  
 </div>
 
 <div class="searchResults">
-
-    <div ng-repeat="result in results" class="list card result">     
+<div ng-repeat="result in results">
+    <div ng-repeat="details in result.venues" class="list card result">     
       
 
       <div class="row">     
         <div class="col col-66 venue">
-            <h4><strong>{{result.venueName}}</strong></h4>
-            <p>{{result.Address}}, {{result.city}}</p>
+            <h4><strong>{{details.name}}</strong></h4>
+
+            <p>{{details.location.formattedAddress[0]}}, {{details.location.formattedAddress[1]}}</p>
 
         </div>
 
         <div class="col col-33 bunkMetrics">
 
           <div class="metrics fp">
-            <h4><span class="badge badge-positive">{{result.fp}} %</span></h4>
+            <h4><span class="badge badge-positive">{{fp()}} %</span></h4>
             <p>Fun Percentage</p>
           </div>
 
           <div class="metrics distance">
-            <h4><span class="badge badge-assertive">{{result.distance}}</span></h4>
+            <h4><span class="badge badge-assertive" >{{details.location.distance/1000}} km</span></h4>
             <p>Distance</p>
           </div>
 
@@ -77,19 +78,18 @@
             </a>
             <a class="tab-item" href="#">
               <i class="icon ion-location"></i>
-              {{result.bunkins}} Bunkins here
+              {{details.stats.checkinsCount}} Bunkins here
             </a>                
       </div>
 
     </div>
-
+</div>
 
 </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/navBar.js"></script>
 
 
   </body>

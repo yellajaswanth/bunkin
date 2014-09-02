@@ -59,3 +59,17 @@ margin-top: 28%;
 h4, h3, p{
   font-family: 'Open Sans', sans-serif;
 }
+
+.venueContainer .vInfo i{
+  
+
+}
+
+.venueContainer .values{
+  
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 2%;
+  padding:0;
+}
