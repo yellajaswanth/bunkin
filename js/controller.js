@@ -51,24 +51,32 @@ BunkinProfile.controller('bunkCardList', function($scope){
 });
 
 BunkinSearchResults.controller('searchRsltCtrl', function($http,$scope){
-    $scope.results;
-    $scope.searchQuery = 'coffee';
+    
+    $scope.loading = false;
 
     $scope.hitEnter = function(keyEvent) {
     if (keyEvent.which === 13){
+        $scope.results = '';
         var url = 'https://api.foursquare.com/v2/venues/search?client_id=H42U1L011OO5XBB4ROHSOBMCOBBPAOUYR55QBFANBGHCBR3P&client_secret=RQGJR3OGLWR0QNTOBU3RLM5TW0JCPWIGKNLS2RHL1XPUVRVV&v=20130815&ll=17.445824,78.377395&query='+$scope.searchQuery;
-
+        $scope.loading = true;
         $http.get(url)
         .success(function(data){
             $scope.results = data;
               $scope.fp = function(){
-                return Math.floor((Math.random()*90)+1);
+                return 68;
                 }
-
-            //console.log($scope.results);
+            $scope.loading = false;
+            console.log($scope.results.venues);
         });
 
     }
+
+    $scope.fp = '';
+
+    $scope.getID = function (id){
+        alert(id);
+        console.log(id);
+    };
 }
 
 
@@ -79,4 +87,22 @@ BunkinSearchResults.controller('searchRsltCtrl', function($http,$scope){
 var BunkinSearch = angular.module('BunkinSearch', []);
 BunkinSearch.controller('searchCtrl', function ($scope) {
 
+});
+
+angular.module('BunkinSearchResults').filter('humanize', function(){
+    return function(text) {
+        if(text) { 
+            text = text.split(" ");
+
+            // go through each word in the text and capitalize the first letter
+            for (var i in text) {
+                var word = text[i];
+                word = word.toLowerCase();
+                word = word.charAt(0).toUpperCase() + word.slice(1);
+                text[i] = word;
+            }
+
+            return text.join(" "); 
+        }
+    };
 });

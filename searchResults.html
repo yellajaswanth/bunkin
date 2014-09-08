@@ -40,16 +40,18 @@
     Relevant results for "{{searchQuery}}"  
 </div>
 
+<div class="spinner" ng-show="loading"><img src="img/loader.gif" alt="" /></div>
+
 <div class="searchResults">
 <div ng-repeat="result in results">
-    <div ng-repeat="details in result.venues" class="list card result">     
+    <div ng-if="details.location.formattedAddress[0]!=''" ng-click="getID(details.id +' ' + details.name)" ng-repeat="details in result.venues" class="list card result">     
       
 
       <div class="row">     
         <div class="col col-66 venue">
-            <h4><strong>{{details.name}}</strong></h4>
+            <h4><strong>{{details.name | humanize}}</strong></h4>
 
-            <p>{{details.location.formattedAddress[0]}}, {{details.location.formattedAddress[1]}}</p>
+            <p>{{details.location.formattedAddress[0] |  humanize}}</p>
 
         </div>
 
@@ -61,11 +63,9 @@
           </div>
 
           <div class="metrics distance">
-            <h4><span class="badge badge-assertive" >{{details.location.distance/1000}} km</span></h4>
+            <h4><span class="badge badge-assertive" >{{details.location.distance/1000 | number:1}} km</span></h4>
             <p>Distance</p>
-          </div>
-
-         
+          </div>         
 
         </div>
       </div>
