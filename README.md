@@ -6,4 +6,4 @@ The app is been designed for users who like to bunk, hangout and share it to the
 With this app, one can plan a bunk, search cool bunks online.
 
 
-Click [a link](https://bunkin.co) and register for more updates.
+Click <a href="bunkin.co">Bunkin</a> and register for more updates.
